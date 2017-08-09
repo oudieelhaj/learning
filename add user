@@ -31,7 +31,6 @@
 <?php
 include "conn.php";
 $type= $_POST["type"]??'';
-$a=0;
         if($type=="Administrato") {
             $a = 1;
             $sql = "insert into emp set e_name='$name',adress='$add',bar='$age',e_jop='Administrato'";
@@ -42,7 +41,7 @@ $a=0;
             }
         }elseif($type=="user")
             {
-                $a=2;
+               
                 $sql = "insert into emp set e_name='$name',adress='$add',bar='$age',e_jop='user'";
                 if(mysql_query($sq))
                     echo "<script>alert('done to add user');</script>";
